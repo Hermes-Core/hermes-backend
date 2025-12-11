@@ -23,4 +23,15 @@ public class HealthController {
         
         return ResponseEntity.ok(response);
     }
+
+    @GetMapping("/teste")
+    public ResponseEntity<Map<String, Object>> teste() {
+        Map<String, Object> response = new HashMap<>();
+        response.put("status", "UP");
+        response.put("application", "Hermes - Sistema de Gestão Escolar");
+        response.put("timestamp", LocalDateTime.now());
+        response.put("message", "Aplicação funcionando corretamente!");
+        
+        return ResponseEntity.ok(response);
+    }
 }
