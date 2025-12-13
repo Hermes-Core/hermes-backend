@@ -1,6 +1,7 @@
 package br.com.ufca.hermes.entity;
 
 import java.time.LocalDate;
+import java.util.List;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -14,7 +15,6 @@ import jakarta.persistence.Table;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.NoArgsConstructor;
-import java.util.List;
 
 @Entity
 @Table(name = "aluno")
@@ -28,8 +28,8 @@ public class Aluno {
     @Column(name = "id_aluno")
     private Long idAluno;
 
-    @Column(nullable = false)
-    private String nome, length = 255;
+    @Column(nullable = false, length = 255)
+    private String nome;
 
     @Column(name = "data_nascimento")
     private LocalDate dataNascimento;
