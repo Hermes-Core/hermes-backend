@@ -9,6 +9,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import lombok.Getter;
 import lombok.Setter;
@@ -27,7 +28,7 @@ public class Aluno {
     private Long idAluno;
 
     @Column(nullable = false)
-    private String nome;
+    private String nome, length = 255;
 
     @Column(name = "data_nascimento")
     private LocalDate dataNascimento;
@@ -40,9 +41,15 @@ public class Aluno {
     @JoinColumn(name = "id_turma")
     private Turma turma;
 
+    @OneToMany(mappedBy = "aluno")
+    private List<Frequencia> frequencias;
+
     @ManyToOne 
     @JoinColumn(name = "id_frequencia")
     private Frequencia frequencia;
+
+    @OneToMany(mappedBy = "aluno")
+    private List<Atividade> atividades;
 
     @ManyToOne 
     @JoinColumn(name = "id_atividade")
