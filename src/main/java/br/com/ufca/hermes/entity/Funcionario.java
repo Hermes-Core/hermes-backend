@@ -1,25 +1,37 @@
-package br.com.ufca.hermes.entity;
+package br.com.ufca.hermes.Entity;
 
-public class Funcionario extends Usuario {
+import jakarta.persistence.*;
+import jakarta.validation.constraints.NotBlank;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
-    private int idFuncionario;
-    private String cargo;
+@Entity
+@Table(name = "tb_funcionario")
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+public class Funcionario {
 
-    public Funcionario(
-            int idUsuario,
-            String nome,
-            String email,
-            String senha,
-            String telefone,
-            String categoria,
-            int idFuncionario,
-            String cargo
-    ) {
-        super(idUsuario, nome, email, senha, telefone, categoria);
-        this.idFuncionario = idFuncionario;
-        this.cargo = cargo;
-    }
-
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+    
+    @NotBlank(message = "Cargo é obrigatório")
+    @Column(nullable = false, length = 50)
+    private String cargo; // SECRETARIA, DIRECAO
+    
+    @Column(length = 50)
+    private String departamento;
+    
+    @Column(length = 20)
+    private String matricula;
+    
+    @ManyToOne
+    @JoinColumn(name = "usuario_id", nullable = false)
+    private Usuario usuario;
 }
 
 
