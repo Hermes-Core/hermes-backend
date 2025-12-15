@@ -1,77 +1,41 @@
-import javax.persistence.*;
+package br.com.ufca.hermes.Entity;
+
+import jakarta.persistence.*;
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotBlank;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
 @Entity
 @Table(name = "tb_usuario")
-public class pessoa {
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+public class Usuario {
+    
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    
     @NotBlank(message = "Nome é obrigatório")
-    @Column(nullable = false)
-    private String name;
+    @Column(nullable = false, length = 100)
+    private String nome;
+    
     @NotBlank(message = "E-mail é obrigatório")
-    @Column(nullable = false)
+    @Email(message = "E-mail inválido")
+    @Column(nullable = false, unique = true, length = 100)
     private String email;
+    
     @NotBlank(message = "Senha é obrigatória")
     @Column(nullable = false)
     private String senha;
-    private int telefone;
-
-
-    public pessoa() {
-    }
-
-
-
-    public pessoa(Long id, String name, String email, String senha, int telefone) {
-        this.id = id;
-        this.name = name;
-        this.email = email;
-        this.senha = senha;
-        this.telefone = telefone;
-    }
-
-    public Long getId() {
-        return id;
-    }
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-    public String getSenha() {
-        return senha;
-    }
-
-    public void setSenha(String senha) {
-        this.senha = senha;
-    }
-
-    public int getTelefone() {
-        return telefone;
-    }
-
-    public void setTelefone(int telefone) {
-        this.telefone = telefone;
-    }
-
-    @java.lang.Override
-    public java.lang.String toString() {
-        return "pessoa{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", email='" + email + '\'' +
-                ", senha='" + senha + '\'' +
-                ", telefone=" + telefone +
-                '}';
-    }
+    
+    @Column(length = 15)
+    private String telefone;
+    
+    @Column(length = 50)
+    private String categoria; // ALUNO, PROFESSOR, FUNCIONARIO, etc.
 }

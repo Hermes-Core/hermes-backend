@@ -1,6 +1,6 @@
 package br.com.ufca.hermes.repository;
 
-import br.com.ufca.hermes.entity.Usuario;
+import br.com.ufca.hermes.Entity.Usuario;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

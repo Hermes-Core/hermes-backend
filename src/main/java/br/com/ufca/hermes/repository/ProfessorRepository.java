@@ -1,18 +1,13 @@
 package br.com.ufca.hermes.repository;
 
-import br.com.ufca.hermes.entity.Professor;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import java.util.List;
+import br.com.ufca.hermes.Entity.Professor;
 
 @Repository
 public interface ProfessorRepository extends JpaRepository<Professor, Long> {
     
-    /**
-     * Busca professores por disciplina
-     * @param idDisciplina o ID da disciplina
-     * @return lista de professores da disciplina
-     */
-    List<Professor> findByIdDisciplina(int idDisciplina);
+    // TODO: Adicionar métodos de busca quando o relacionamento com Disciplina for implementado
+    // List<Professor> findByDisciplinasId(Long idDisciplina);
 }

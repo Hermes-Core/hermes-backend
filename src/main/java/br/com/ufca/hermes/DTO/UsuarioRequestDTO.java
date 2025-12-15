@@ -11,12 +11,19 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class LoginRequest {
+public class UsuarioRequestDTO {
 
+    @NotBlank(message = "Nome é obrigatório")
+    private String nome;
+    
     @NotBlank(message = "Email é obrigatório")
     @Email(message = "Email inválido")
     private String email;
     
     @NotBlank(message = "Senha é obrigatória")
     private String senha;
+    
+    private String telefone;
+    
+    private String categoria;
 }
