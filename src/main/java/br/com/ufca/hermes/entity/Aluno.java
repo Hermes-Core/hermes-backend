@@ -42,9 +42,6 @@ public class Aluno {
     @JoinColumn(name = "id_turma")
     private Turma turma;
 
-    @OneToMany(mappedBy = "aluno")
-    private List<Frequencia> frequencias;
-
     @ManyToOne 
     @JoinColumn(name = "id_frequencia")
     private Frequencia frequencia;
