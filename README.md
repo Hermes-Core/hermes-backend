@@ -56,7 +56,9 @@ Enquanto a modelagem conceitual foca no "o quê" (quais informações precisamos
 2.  **Desempenho (Performance):** Definir corretamente os tipos de dados (usar números inteiros para IDs, por exemplo) e criar índices faz com que o sistema responda instantaneamente, mesmo com um grande volume de informações.
 
 3.  **Conexão com o Back-end:** Para um desenvolvedor (seja Java, Python ou Node.js), entender o banco de dados físico é essencial para escrever um código eficiente. O banco de dados é a base onde toda a lógica da aplicação se apoia para persistir as informações de forma duradoura.
-<img width="6238" height="8192" alt="Gestão Escolar Notas Flow-2026-02-09-234936" src="https://github.com/user-attachments/assets/23060565-61eb-4ef7-b8e6-7fe122dda51d" />
+
+<img width="6238" height="8192" alt="Gestão Escolar Notas Flow-2026-02-09-235419" src="https://github.com/user-attachments/assets/785cc6e7-6e75-4e53-a932-f23ebadbdb38" />
+
 ---
 
 ## ☕ Arquitetura e POO (Implementação Acadêmica)
