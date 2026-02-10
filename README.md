@@ -44,6 +44,23 @@ O sistema atende a dois perfis principais de usuários, conforme definido nos Ca
 
 ---
 
+## 🎲 Projeto Físico de Banco de Dados
+O **Projeto Físico** é a etapa técnica onde transformamos os diagramas visuais e modelos teóricos (como o DER) em comandos reais que o sistema gerenciador de banco de dados (SGBD) pode executar. É neste momento que definimos a estrutura exata de como os dados serão armazenados no servidor.
+
+Enquanto a modelagem conceitual foca no "o quê" (quais informações precisamos?), o projeto físico define o "como" (de que forma vamos guardar isso?).
+
+**Por que isso é fundamental para quem estuda programação?**
+
+1.  **Integridade e Segurança:** É no projeto físico que criamos regras rígidas (restrições) para garantir a qualidade dos dados. Por exemplo: impedir que o sistema aceite uma nota escolar negativa ou bloquear o cadastro de dois usuários com o mesmo e-mail.
+
+2.  **Desempenho (Performance):** Definir corretamente os tipos de dados (usar números inteiros para IDs, por exemplo) e criar índices faz com que o sistema responda instantaneamente, mesmo com um grande volume de informações.
+
+3.  **Conexão com o Back-end:** Para um desenvolvedor (seja Java, Python ou Node.js), entender o banco de dados físico é essencial para escrever um código eficiente. O banco de dados é a base onde toda a lógica da aplicação se apoia para persistir as informações de forma duradoura.
+
+<img width="6238" height="8192" alt="Gestão Escolar Notas Flow-2026-02-09-235419" src="https://github.com/user-attachments/assets/785cc6e7-6e75-4e53-a932-f23ebadbdb38" />
+
+---
+
 ## ☕ Arquitetura e POO (Implementação Acadêmica)
 
 Este projeto está sendo desenvolvido utilizando **Java com Spring Boot**, adotando os princípios da **Orientação a Objetos** para mapear o mundo real escolar para o software. Abaixo, detalhamos como os requisitos da disciplina foram atendidos:

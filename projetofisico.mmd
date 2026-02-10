@@ -1,0 +1,65 @@
+---
+config:
+  layout: dagre
+  look: classic
+  theme: default
+---
+erDiagram
+    USUARIO {
+        int id_usuario PK "Auto Increment"
+        varchar(100) nome "Not Null"
+        varchar(100) email "Unique, Not Null"
+        varchar(255) senha "Hash encriptado"
+        varchar(20) telefone
+        enum categoria "PROFESSOR, FUNCIONARIO, RESPONSAVEL"
+    }
+    FUNCIONARIO {
+        int id_funcionario PK "Auto Increment"
+        varchar(50) cargo
+        int id_usuario FK "Ref: USUARIO, Unique"
+    }
+    PROFESSOR {
+        int id_professor PK "Auto Increment"
+        int id_funcionario FK "Ref: FUNCIONARIO, Unique"
+    }
+    ALUNO {
+        int id_aluno PK "Auto Increment"
+        varchar(100) nome "Not Null"
+        date data_nascimento
+        int id_usuario FK "Ref: USUARIO (Responsável)"
+        int id_turma FK "Ref: TURMA"
+    }
+    TURMA {
+        int id_turma PK "Auto Increment"
+        varchar(20) serie
+        int id_professor FK "Ref: PROFESSOR (Regente)"
+    }
+    DISCIPLINA {
+        int id_disciplina PK "Auto Increment"
+        varchar(50) nome
+        int id_turma FK "Ref: TURMA"
+        int id_professor FK "Ref: PROFESSOR"
+    }
+    NOTAS {
+        int id_nota PK "Auto Increment"
+        decimal(4_2) ap1 "0.00 a 10.00"
+        decimal(4_2) ap2 "0.00 a 10.00"
+        decimal(4_2) media_final
+        int id_aluno FK "Ref: ALUNO"
+        int id_disciplina FK "Ref: DISCIPLINA"
+    }
+    FREQUENCIA {
+        int id_frequencia PK "Auto Increment"
+        datetime data "Data da chamada"
+        boolean presente "True/False"
+        int id_aluno FK "Ref: ALUNO"
+        int id_disciplina FK "Ref: DISCIPLINA"
+    }
+    ATIVIDADES {
+        int id_atividade PK "Auto Increment"
+        varchar(100) titulo
+        text descricao
+        datetime data_entrega
+        int id_aluno FK "Ref: ALUNO"
+        int id_disciplina FK "Ref: DISCIPLINA"
+    }
