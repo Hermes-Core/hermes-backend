@@ -10,7 +10,10 @@
 * [Sobre o Projeto](#-sobre-o-projeto)
 * [Funcionalidades](#-funcionalidades)
 * [Arquitetura e POO](#-arquitetura-e-poo-implementação-acadêmica)
-* [Impacto Social](#-possíveis-usos-da-nossa-solução-componente-extensionista)
+* [Arquitetura de Informação e Prototipagem](#-arquitetura-de-informação-e-prototipagem)
+* [Princípios de IHC Aplicados](#-princípios-de-ihc-aplicados)
+* [Acessibilidade e Design Inclusivo](#-acessibilidade-e-design-inclusivo)
+* [Impacto Social](#-impacto-social-componente-extensionista)
 * [Tecnologias](#-tecnologias-utilizadas)
 * [Modelagem de Dados](#-modelagem-de-dados-der)
 * [Como Rodar](#-como-rodar-o-projeto)
@@ -81,18 +84,107 @@ O projeto segue a arquitetura em camadas (Layered Architecture):
 
 ---
 
-## 🌍 Possíveis usos da nossa solução (Componente Extensionista)
+## 🗺️ IHC e Prototipagem
 
-O projeto **Hermes** transcende o ambiente acadêmico, apresentando potencial real para modernizar a educação básica em escolas públicas e privadas. Abaixo, listamos como a solução impacta o mundo real:
+Na Sprint 3 (EP3), o projeto Hermes evoluiu para além do Back-end, incorporando uma **camada de experiência de usuário** estruturada e planejada. Agora, contamos com um **Sitemap** e **Wireframes** que traduzem os Casos de Uso (UC01 a UC12) em interfaces concretas, garantindo que a navegação seja intuitiva e eficiente.
+
+### 📐 Sitemap Hierárquico
+O **Sitemap** foi estruturado de forma hierárquica, seguindo os princípios da Arquitetura de Informação. Essa organização permite que o usuário encontre informações críticas (como notas, frequência e agendamentos) em **no máximo dois ou três cliques**, garantindo:
+
+* **Eficiência na navegação:** Redução do tempo de busca por informações.
+* **Clareza estrutural:** Divisão lógica entre módulos (Agenda, Desempenho, Atendimentos).
+* **Escalabilidade:** Facilidade para adicionar novas funcionalidades sem comprometer a usabilidade.
+
+### 🖼️ Layout Dashboard Web
+O layout escolhido foi um **Dashboard Web com barra lateral fixa**, focado em manter a **consistência visual** em todos os módulos do sistema. Essa decisão de design:
+
+* **Mantém o contexto:** O menu lateral sempre visível permite que o usuário saiba onde está e navegue rapidamente entre seções.
+* **Padroniza a experiência:** Todos os módulos (Agenda, Desempenho, Atendimentos) seguem a mesma estrutura visual, reduzindo a curva de aprendizado.
+* **Otimiza o espaço:** A área principal fica dedicada ao conteúdo relevante, sem distrações.
+
+Essa estruturação visual não é arbitrária — ela reflete os **modelos mentais** dos usuários (pais e escolas), tornando o sistema natural e previsível.
+
+---
+
+## 🎨 Princípios de IHC Aplicados
+
+O Hermes foi projetado com base nos **princípios fundamentais de Interação Humano-Computador (IHC)**, garantindo que a tecnologia se adapte ao usuário, e não o contrário.
+
+### 1. Affordance e Modelos Mentais
+A interface utiliza **ícones e componentes visuais** que remetem a objetos do mundo real escolar, facilitando o aprendizado intuitivo dos pais:
+
+* **Calendário visual:** Para representar a agenda de tarefas e eventos, utilizamos um componente de calendário similar aos encontrados em aplicativos de agenda pessoal.
+* **Boletim escolar digital:** A apresentação de notas segue o formato tradicional de boletins, facilitando a compreensão imediata.
+* **Ícones reconhecíveis:** Utilizamos símbolos universais (📅 para agenda, 📊 para desempenho, 👤 para perfil) que dispensam explicações textuais.
+
+Essa estratégia reduz a **carga cognitiva**, permitindo que usuários com diferentes níveis de literacia digital utilizem o sistema sem treinamento formal.
+
+### 2. Visibilidade do Status do Sistema
+O design garante que o usuário **sempre saiba em qual seção está** e receba **feedback visual sobre suas ações**:
+
+* **Breadcrumbs (migalhas de pão):** Indicam o caminho de navegação atual.
+* **Destaque visual no menu:** A seção ativa aparece com cor diferenciada.
+* **Mensagens de confirmação:** Ao agendar um atendimento ou salvar uma informação, o sistema exibe um feedback imediato ("Agendamento confirmado com sucesso!").
+
+Esse princípio, descrito por Jakob Nielsen como uma das **heurísticas de usabilidade**, evita que o usuário se sinta perdido ou inseguro durante a navegação.
+
+---
+
+## ♿ Acessibilidade e Design Inclusivo
+
+O **compromisso social com a acessibilidade** é um pilar fundamental do Hermes. Reconhecemos que a educação é um direito universal, e a tecnologia deve remover barreiras, não criá-las.
+
+### 🎯 Alto Contraste e Legibilidade
+O sistema utiliza **alto contraste** entre texto e fundo, além de **fontes legíveis** (tamanho mínimo de 14px), para atender:
+
+* **Usuários com baixa visão ou dificuldades visuais:** Facilitando a leitura sem auxílio de tecnologias assistivas.
+* **Contextos de uso adversos:** Pais que acessam o sistema em ambientes externos, sob alta luminosidade, ou em situações de pressa.
+
+### 🌐 Cidadania Digital e Inclusão
+O **design inclusivo** não é apenas uma escolha técnica — é uma **prática de cidadania digital**. Ao projetar para todos, estamos:
+
+* **Removendo barreiras tecnológicas:** Permitindo que pais com diferentes níveis de familiaridade com tecnologia utilizem o sistema.
+* **Promovendo equidade:** Garantindo que informações escolares sejam acessíveis independentemente de condições socioeconômicas ou capacidades físicas.
+* **Fortalecendo a inclusão educacional:** Famílias que antes eram excluídas do acompanhamento escolar por barreiras tecnológicas agora têm acesso facilitado.
+
+Essa abordagem alinha o Hermes aos princípios da **Web Content Accessibility Guidelines (WCAG)** e reflete o compromisso da equipe com uma tecnologia que serve a todos.
+
+---
+
+## 🌍 Impacto Social (Componente Extensionista)
+
+O projeto **Hermes** transcende o ambiente acadêmico, apresentando potencial real para modernizar a educação básica em escolas públicas e privadas. Ao adotar o **Design Centrado no Usuário (User-Centered Design - UCD)**, colocamos as necessidades dos pais e da comunidade escolar no centro de todas as decisões de projeto.
+
+### 🧑‍🤝‍🧑 Design Centrado no Usuário (UCD)
+O **User-Centered Design** não é apenas uma metodologia — é uma filosofia que transforma a forma como a tecnologia é concebida. Ao colocar as **necessidades reais dos pais** no centro do projeto, o Hermes deixa de ser um simples sistema e se torna uma **ferramenta de democratização da informação escolar**.
+
+Na prática, isso significa:
+
+* **Pesquisa com usuários reais:** As funcionalidades foram definidas a partir de entrevistas com pais, professores e gestores escolares, identificando dores reais (como a dificuldade de acompanhar a frequência ou a falta de transparência nas notas).
+* **Iteração constante:** Os wireframes e protótipos foram validados com usuários antes da implementação, garantindo que a interface atenda às expectativas e limitações do público-alvo.
+* **Foco na simplicidade:** Reconhecemos que muitos pais têm baixa literacia digital. Por isso, cada tela foi simplificada ao máximo, evitando jargões técnicos e priorizando a clareza.
+
+Essa abordagem garante que o Hermes seja **efetivamente usado**, e não apenas desenvolvido.
+
+### 🎯 Democratização da Informação Escolar
+Ao colocar as necessidades dos pais no centro do projeto, o Hermes:
+
+* **Combate a assimetria de informação:** Antes do Hermes, muitos pais só descobriam problemas acadêmicos dos filhos no final do bimestre, quando já era tarde demais. Agora, a informação flui em tempo real.
+* **Fortalece o vínculo família-escola:** A transparência e a comunicação facilitada criam uma relação de confiança entre pais e instituição.
+* **Reduz a evasão escolar:** Pais informados e engajados conseguem identificar sinais de desinteresse ou dificuldade, permitindo intervenções pedagógicas e familiares antes que o aluno abandone os estudos.
+
+### 💡 Impactos Concretos no Mundo Real
 
 1.  **Inclusão de Famílias com Rotinas Intensas**
     * Em um cenário onde o tempo é escasso, muitos pais não conseguem ir à escola. O aplicativo permite que pais que trabalham longe acompanhem a frequência e o comportamento dos filhos em tempo real, garantindo a presença familiar mesmo à distância.
 
 2.  **Combate à Evasão e Queda de Rendimento**
-    * Substituindo agendas de papel, o Hermes permite intervenções pedagógicas precoces. Pais informados rapidamente sobre notas baixas ou faltas podem agir antes que o aluno reprove, promovendo o sucesso escolar
+    * Substituindo agendas de papel, o Hermes permite intervenções pedagógicas precoces. Pais informados rapidamente sobre notas baixas ou faltas podem agir antes que o aluno reprove, promovendo o sucesso escolar.
 
 3.  **Modernização da Gestão Escolar**
     * Para a escola, a solução elimina processos manuais e burocráticos, otimizando o tempo dos professores e centralizando informações financeiras e acadêmicas em um só lugar.
+
+Ao unir **tecnologia, design centrado no usuário e compromisso social**, o Hermes se consolida como uma ferramenta de transformação educacional, promovendo equidade e fortalecendo a relação entre família e escola.
 
 ---
 
