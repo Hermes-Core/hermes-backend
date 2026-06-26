@@ -186,6 +186,35 @@ Ao colocar as necessidades dos pais no centro do projeto, o Hermes:
 
 Ao unir **tecnologia, design centrado no usuário e compromisso social**, o Hermes se consolida como uma ferramenta de transformação educacional, promovendo equidade e fortalecendo a relação entre família e escola.
 
+## O que é Arquitetura de Software?
+
+A arquitetura de software é a definição de como os componentes de um sistema serão organizados, de como irão se comunicar e cooperar entre si, determinando as regras de interação entre o banco de dados, as interfaces e as regras de negócio da aplicação.
+
+## Importância no Desenvolvimento de Sistemas
+
+A relevância da arquitetura no desenvolvimento está na previsibilidade e na mitigação dos riscos, uma vez que sua aplicação funciona como um guia para a equipe de desenvolvimento, padronizando soluções, otimizando o fluxo de trabalho e garantindo que decisões sejam tomadas com embasamento, poupando tempo e recursos financeiros.
+
+## Impactos Diretos no Ciclo de Vida do Sistema
+
+#### Escalabilidade: 
+Um sistema bem arquitetado consegue lidar com o aumento repentino de acessos ou volume de dados sem precisar ser reescrito do zero.
+
+#### Segurança: 
+A arquitetura define as barreiras de proteção do sistema desde a sua concepção, dessa forma é possível isolar dados sensíveis, estabelecer como os componentes validam as requisições e limitar os pontos de vulnerabilidade que poderiam ser explorados.
+
+#### Desempenho: 
+A velocidade de resposta e a eficiência no uso de recursos dependem de como a arquitetura gerencia o fluxo de dados. Estratégias de armazenamento temporário e distribuição de acessos são decisões estruturais que determinam se o sistema será rápido ou lento sob estresse.
+
+#### Manutenção: 
+Um código organizado e separado por responsabilidades bem definidas torna a correção de falhas muito mais simples. Com isso, novos desenvolvedores conseguem entender o projeto rapidamente, e as alterações podem ser feitas de forma isolada e segura.
+
+#### Evolução do Sistema:  
+Uma boa arquitetura permite que novas funcionalidades sejam adicionadas ou que tecnologias antigas sejam substituídas sem que seja necessário refazer toda a aplicação.
+
+#### Influência Direta na Qualidade do Projeto
+
+A arquitetura dita a viabilidade a longo prazo de um projeto, é ela que garante que os atributos de qualidade sejam de fato atendidos, sem o desenho estrutural, o código vira só um amontoado de linhas de código. É a arquitetura que transforma esse trabalho em um sistema robusto, seguro, fácil de manter e que realmente agrega valor para o negócio.
+
 ---
 
 ## 🛠 Tecnologias Utilizadas
